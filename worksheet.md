@@ -19,12 +19,12 @@ var myvar = 'my value';
 ```
 
 ###output:
-> `undefined`
->
+>- `undefined`
+
 ###why?
 >- because the local variable gets hoisted to the top of the function scope, 
 >- but the initialization wasn't hoisted so that value of myvar is undefined
->-
+
 ###rewrite without hoisting
 
 ```js
@@ -57,8 +57,10 @@ test();
 
 ###output:
 >- `Switch flag from false to true`
+
 ###why?
 >- flag is undefined, which is falsey, which means that the `else` is run
+
 ###rewrite without hoisting
 
 ```js
@@ -78,6 +80,7 @@ test();
 <hr>
 
 ##Snippet Three
+
 ```js
 var message = 'Hello world'; 
   
@@ -90,9 +93,11 @@ saySomething();
 
 ###output:
 >- `undefined`
+
 ###why?
 >- var message is hoisted to the top of the function scope, but it doesn't 
 >- bring initialized value with it
+
 ###rewrite without hoisting
 
 ```js
@@ -107,6 +112,7 @@ saySomething();
 <hr>
 
 ##Snippet Four
+
 ```js
 var message = 'Hello world'; 
   
@@ -119,9 +125,11 @@ saySomething();
 
 ###output:
 >- `Hello world`
+
 ###why?
 >- `var message` is hoisted above the function so that the function knows what 
 >- message is.
+
 ###rewrite without hoisting
 
 ```js
@@ -199,6 +207,7 @@ test();
 >- so the first `console.log` is undefined because bar's value didn't come 
 >- with it when it was hoisted <br> the second one is console logging aloha 
 >- because your calling the function foo that was hoisted
+
 ###rewrite without hoisting
 
 ```js
@@ -236,10 +245,12 @@ fancy();
 
 ###output:
 >- `I can run`
+
 ###why?
 >- so the function run is hoisted up to the top of the function fancy which is 
 >- a truthy value because of the returned string to the console, so the if 
 >- statement is run
+
 ###rewrite without hoisting
 
 ```js
@@ -280,9 +291,11 @@ fancy();
 
 ###output:
 >- `I can't run`
+
 ###why?
 >- so run is a named function which isn't hoisted at all, thus making run 
 >- undefined, which causes the else statement to run
+
 ###rewrite without hoisting
 
 ```js
